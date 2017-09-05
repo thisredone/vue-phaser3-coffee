@@ -18,6 +18,10 @@
     "vue-router": "^2.7.0"{{/router}}
   },
   "devDependencies": {
+    "coffee-loader": "github:webpack-contrib/coffee-loader#0ea4d6a7cc9ffc7c8f7a0c6eb3fd3fedea9943b8",
+    "coffeescript": "next",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     {{#lint}}
