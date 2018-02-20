@@ -14,6 +14,7 @@
 <script lang="coffee">
 {{#unless router}}
 import HelloWorld from './components/HelloWorld'
+{{/unless}}
 import 'phaser'
 
 class Game extends Phaser.Game
@@ -26,7 +27,6 @@ class Game extends Phaser.Game
       parent: 'game'
       scene: [])
 
-{{/unless}}
 export default
   name: 'App'{{#router}}{{else}}
   components: {HelloWorld}{{/router}}
