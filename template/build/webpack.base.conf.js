@@ -55,6 +55,20 @@ module.exports = {
         loader: 'coffee-loader'
       },
       {
+        test: /\.styl$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          'stylus-loader'
+        ]
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
