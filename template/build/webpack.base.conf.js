@@ -38,6 +38,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       {{/if_eq}}
       '@': resolve('src'),
+      'phaser$': resolve('node_modules/phaser/src/phaser.js'),
     }
   },
   module: {
@@ -96,6 +97,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: [/\.vert$/, /\.frag$/],
+        use: 'raw-loader'
       }
     ]
   },
